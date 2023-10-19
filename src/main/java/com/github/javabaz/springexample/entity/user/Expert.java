@@ -1,5 +1,6 @@
 package com.github.javabaz.springexample.entity.user;
 
+import com.github.javabaz.springexample.entity.credit.Wallet;
 import com.github.javabaz.springexample.entity.enums.ExpertStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -51,5 +52,9 @@ public class Expert {
     @Basic(fetch = FetchType.LAZY)
     @Column(name = "profile_picture")
     private byte[] profilePicture;
+
+    @OneToOne
+    @JoinColumn(name = "wallet_id")
+    private Wallet wallet;
 
 }
