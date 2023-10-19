@@ -12,5 +12,7 @@ public interface CategoryService {
 
     List<Category> findAll();
 
+    Category saveOrUpdate(Category category);
+
 
 }
