@@ -10,5 +10,7 @@ public interface CategoryService {
 
     Category findByName(String name) throws CategoryNotFoundException;
 
+    List<Category> findAll();
+
 
 }
