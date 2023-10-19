@@ -3,10 +3,7 @@ package com.github.javabaz.springexample.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
+import lombok.*;
 
 
 import java.time.LocalDateTime;
@@ -15,6 +12,8 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "client_table")
 public class Client {
 
@@ -47,7 +46,5 @@ public class Client {
     @Basic(fetch = FetchType.LAZY)
     @Column(name = "profile_picture")
     private byte[] profilePicture;
-
-
 
 }
