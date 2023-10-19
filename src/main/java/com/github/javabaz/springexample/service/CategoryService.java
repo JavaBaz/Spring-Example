@@ -14,5 +14,6 @@ public interface CategoryService {
 
     Category saveOrUpdate(Category category);
 
+    void delete(String name) throws CategoryNotFoundException;
 
 }
