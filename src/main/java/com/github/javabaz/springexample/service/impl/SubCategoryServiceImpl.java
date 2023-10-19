@@ -19,4 +19,14 @@ public class SubCategoryServiceImpl implements SubCategoryService {
     }
 
 
+    @Override
+    public SubCategory findByName(String name) throws SubCategoryNotFoundException {
+        SubCategory subCategory = subCategoryRepository.findByName(name);
+        if (subCategory == null){
+            throw new SubCategoryNotFoundException("Category not found with name: " + name);
+        }
+        return subCategory;
+    }
+
+
 }
