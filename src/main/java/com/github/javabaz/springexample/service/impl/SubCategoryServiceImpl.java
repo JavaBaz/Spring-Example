@@ -33,4 +33,9 @@ public class SubCategoryServiceImpl implements SubCategoryService {
         return subCategoryRepository.findAll();
     }
 
+    @Override
+    public SubCategory saveOrUpdate(SubCategory subCategory) {
+        return subCategoryRepository.save(subCategory);
+    }
+
 }
