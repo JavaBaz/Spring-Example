@@ -3,7 +3,6 @@ package com.github.javabaz.springexample.base.service.impl;
 import com.github.javabaz.springexample.base.repository.BaseRepository;
 import com.github.javabaz.springexample.base.service.BaseService;
 import jakarta.persistence.EntityNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
