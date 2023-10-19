@@ -1,0 +1,7 @@
+package com.github.javabaz.springexample.repository;
+
+import com.github.javabaz.springexample.entity.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoryRepository extends JpaRepository<Category,Long> {
+}
