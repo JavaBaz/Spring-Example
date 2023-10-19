@@ -38,6 +38,11 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryRepository.save(category);
     }
 
+    @Override
+    public void delete(String name) throws CategoryNotFoundException {
+        Category category = findByName(name);
+        categoryRepository.delete(category);
+    }
 
 
 }
