@@ -1,5 +1,6 @@
-package com.github.javabaz.springexample.entity;
+package com.github.javabaz.springexample.entity.user;
 
+import com.github.javabaz.springexample.entity.enums.ExpertStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -40,6 +41,10 @@ public class Expert {
     @Column(name = "sign_up_date")
     @NotNull(message = "sign up date can not be null")
     private LocalDateTime signUpDate;
+
+    @Enumerated(EnumType.STRING)
+    @NotNull(message = "Expert's status can not be null")
+    private ExpertStatus expertStatus;
 
 
     @Lob
