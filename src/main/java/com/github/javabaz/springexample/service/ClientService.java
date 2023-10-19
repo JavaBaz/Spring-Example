@@ -1,5 +1,8 @@
 package com.github.javabaz.springexample.service;
 
-public interface ClientService {
+import com.github.javabaz.springexample.base.service.BaseService;
+import com.github.javabaz.springexample.entity.user.Client;
+
+public interface ClientService extends BaseService<Client, Long> {
 
 }
