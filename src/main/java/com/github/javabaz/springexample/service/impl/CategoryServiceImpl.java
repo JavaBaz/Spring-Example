@@ -33,6 +33,11 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryRepository.findAll();
     }
 
+    @Override
+    public Category saveOrUpdate(Category category) {
+        return categoryRepository.save(category);
+    }
+
 
 
 }
