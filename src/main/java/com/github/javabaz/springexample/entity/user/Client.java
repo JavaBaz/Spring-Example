@@ -1,4 +1,4 @@
-package com.github.javabaz.springexample.entity;
+package com.github.javabaz.springexample.entity.user;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
