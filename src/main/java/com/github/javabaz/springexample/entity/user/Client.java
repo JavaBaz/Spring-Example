@@ -1,5 +1,6 @@
 package com.github.javabaz.springexample.entity.user;
 
+import com.github.javabaz.springexample.entity.credit.Wallet;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -47,4 +48,7 @@ public class Client {
     @Column(name = "profile_picture")
     private byte[] profilePicture;
 
+    @OneToOne
+    @JoinColumn(name = "wallet_id")
+    private Wallet wallet;
 }
