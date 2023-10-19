@@ -10,4 +10,6 @@ public interface SubCategoryService {
     SubCategory findByName(String name) throws SubCategoryNotFoundException;
 
     List<SubCategory> findAll();
+
+    SubCategory saveOrUpdate(SubCategory subCategory);
 }
