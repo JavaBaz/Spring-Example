@@ -1,5 +1,7 @@
 package com.github.javabaz.springexample.entity;
 
+import com.github.javabaz.springexample.entity.user.Client;
+import com.github.javabaz.springexample.entity.user.Expert;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
