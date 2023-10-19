@@ -12,4 +12,7 @@ public interface SubCategoryService {
     List<SubCategory> findAll();
 
     SubCategory saveOrUpdate(SubCategory subCategory);
+
+    void delete(String name) throws SubCategoryNotFoundException;
+
 }
