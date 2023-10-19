@@ -38,4 +38,9 @@ public class SubCategoryServiceImpl implements SubCategoryService {
         return subCategoryRepository.save(subCategory);
     }
 
+    @Override
+    public void delete(String name) throws SubCategoryNotFoundException {
+        SubCategory subCategory = findByName(name);
+        subCategoryRepository.delete(subCategory);
+    }
 }
