@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class SubCategoryServiceImpl  extends BaseServiceImpl<SubCategory,Long,SubCategoryRepository> implements SubCategoryService {
+public class SubCategoryServiceImpl extends BaseServiceImpl<SubCategory,Long,SubCategoryRepository> implements SubCategoryService {
 
 
     public SubCategoryServiceImpl(SubCategoryRepository repository) {
