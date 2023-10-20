@@ -1,6 +1,6 @@
-package com.github.javabaz.springexample.entity.nameless.offer;
+package com.github.javabaz.springexample.entity.offer;
 
-import com.github.javabaz.springexample.entity.withname.user.Expert;
+import com.github.javabaz.springexample.entity.user.Expert;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -21,6 +21,8 @@ public class ExpertOffer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(nullable = false)
+    private String name;
 
     @ManyToOne
     private ClientOffer clientOffer;

@@ -1,7 +1,7 @@
-package com.github.javabaz.springexample.entity.nameless;
+package com.github.javabaz.springexample.entity;
 
-import com.github.javabaz.springexample.entity.withname.user.Client;
-import com.github.javabaz.springexample.entity.withname.user.Expert;
+import com.github.javabaz.springexample.entity.user.Client;
+import com.github.javabaz.springexample.entity.user.Expert;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -18,6 +18,9 @@ public class Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @Column(nullable = false)
+    private String name;
 
     @ManyToOne
     @JoinColumn(name = "client_id")

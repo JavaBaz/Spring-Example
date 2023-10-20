@@ -1,6 +1,7 @@
-package com.github.javabaz.springexample.entity.withname;
+package com.github.javabaz.springexample.entity;
 
 
+import com.github.javabaz.springexample.entity.Category;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -1,6 +1,6 @@
-package com.github.javabaz.springexample.entity.withname.user;
+package com.github.javabaz.springexample.entity.user;
 
-import com.github.javabaz.springexample.entity.nameless.credit.Wallet;
+import com.github.javabaz.springexample.entity.credit.Wallet;
 import com.github.javabaz.springexample.entity.enums.ExpertStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -24,13 +24,9 @@ public class Expert {
     private Long id;
 
 
-    @Column(name = "first_name")
-    @NotNull(message = "First name can not be null")
-    private String firstName;
-
-    @Column(name = "last_name")
-    @NotNull(message = "Last name can not be null")
-    private String lastName;
+    @Column(name = "name",nullable = false)
+    @NotNull(message = "Name can not be null")
+    private String name;
 
     @Column(unique = true)
     private String email;
