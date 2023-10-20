@@ -1,6 +1,6 @@
-package com.github.javabaz.springexample.entity.offer;
+package com.github.javabaz.springexample.entity.nameless.offer;
 
-import com.github.javabaz.springexample.entity.user.Expert;
+import com.github.javabaz.springexample.entity.withname.user.Expert;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;

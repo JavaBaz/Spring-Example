@@ -1,4 +1,4 @@
-package com.github.javabaz.springexample.entity.offer;
+package com.github.javabaz.springexample.entity.nameless.offer;
 
 
 import com.github.javabaz.springexample.entity.withname.SubCategory;
