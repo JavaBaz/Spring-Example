@@ -1,6 +1,7 @@
 package com.github.javabaz.springexample.util;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
@@ -12,6 +13,8 @@ import java.util.regex.Pattern;
 public class Validator {
 
     public static Scanner scanner = new Scanner(System.in);
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
 
     public static String getStringInput() {
         while (true) {
@@ -151,6 +154,19 @@ public class Validator {
         }
     }
 
+
+
+    public static LocalDateTime getLocalDateTimeInput() {
+        while (true) {
+            System.out.print("Enter a date and time (yyyy-MM-dd HH:mm:ss): ");
+            String input = getStringInput();
+            try {
+                return LocalDateTime.parse(input, formatter);
+            } catch (Exception e) {
+                System.out.println("Invalid date and time format. Please use the format yyyy-MM-dd HH:mm:ss.");
+            }
+        }
+    }
 
     //============================= internal methods =============================
 

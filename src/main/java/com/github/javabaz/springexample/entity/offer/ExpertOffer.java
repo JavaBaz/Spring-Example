@@ -31,7 +31,7 @@ public class ExpertOffer {
     private Expert expert;
 
     @Column(name = "expert_offered_date")
-    private LocalDate expertOfferedDate;
+    private LocalDateTime expertOfferedDate;
 
     @Column(name = "days_need_to_work")
     private int daysNeedToWork;
