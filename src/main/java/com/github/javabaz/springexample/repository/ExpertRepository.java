@@ -1,7 +1,7 @@
 package com.github.javabaz.springexample.repository;
 
 import com.github.javabaz.springexample.base.repository.BaseRepository;
-import com.github.javabaz.springexample.entity.user.Expert;
+import com.github.javabaz.springexample.entity.withname.user.Expert;
 
 public interface ExpertRepository extends BaseRepository<Expert, Long> {
 }

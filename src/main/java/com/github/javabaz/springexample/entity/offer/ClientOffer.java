@@ -1,9 +1,9 @@
 package com.github.javabaz.springexample.entity.offer;
 
 
-import com.github.javabaz.springexample.entity.SubCategory;
+import com.github.javabaz.springexample.entity.withname.SubCategory;
 import com.github.javabaz.springexample.entity.enums.OfferStatus;
-import com.github.javabaz.springexample.entity.user.Client;
+import com.github.javabaz.springexample.entity.withname.user.Client;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;

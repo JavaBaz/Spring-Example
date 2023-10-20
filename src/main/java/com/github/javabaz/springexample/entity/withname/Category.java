@@ -1,4 +1,4 @@
-package com.github.javabaz.springexample.entity;
+package com.github.javabaz.springexample.entity.withname;
 
 
 import jakarta.persistence.*;

@@ -1,6 +1,6 @@
-package com.github.javabaz.springexample.entity.user;
+package com.github.javabaz.springexample.entity.withname.user;
 
-import com.github.javabaz.springexample.entity.credit.Wallet;
+import com.github.javabaz.springexample.entity.nameless.credit.Wallet;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
