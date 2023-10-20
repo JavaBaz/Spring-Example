@@ -19,7 +19,8 @@ public class ClientServiceImpl extends BaseServiceImpl<Client, Long, ClientRepos
         if(!Validator.isPasswordStrong(password)){
             System.out.println("New Password is not strong!");
         }else {
-            repository.updateByPassword(client,password);
+            client.setPassword(password);
+            repository.save(client);
         }
     }
     }
