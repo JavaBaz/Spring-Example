@@ -12,4 +12,9 @@ public class RatingServiceImpl extends BaseServiceImpl<Rating, Long, RatingRepos
     public RatingServiceImpl(RatingRepository repository) {
         super(repository);
     }
+
+    @Override
+    public double getAverageOfExpert(Long id) {
+        return repository.getAvrageRatingByExpertId(id);
+    }
 }

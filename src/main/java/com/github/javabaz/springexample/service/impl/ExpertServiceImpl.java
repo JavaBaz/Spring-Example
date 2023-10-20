@@ -9,6 +9,7 @@ import com.github.javabaz.springexample.entity.user.Expert;
 import com.github.javabaz.springexample.repository.ExpertRepository;
 import com.github.javabaz.springexample.service.ClientOfferService;
 import com.github.javabaz.springexample.service.ExpertService;
+import com.github.javabaz.springexample.service.RatingService;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -17,13 +18,13 @@ import java.util.*;
 public class ExpertServiceImpl extends BaseServiceImpl<Expert, Long, ExpertRepository> implements ExpertService {
 
     ClientOfferService clientOfferService;
+    RatingService ratingService;
 
-
-    public ExpertServiceImpl(ExpertRepository repository, ClientOfferService clientOfferService) {
+    public ExpertServiceImpl(ExpertRepository repository, ClientOfferService clientOfferService, RatingService ratingService) {
         super(repository);
         this.clientOfferService = clientOfferService;
+        this.ratingService = ratingService;
     }
-
 
     @Override
     public List<ClientOffer> findAvailableOffers(Expert expert) {
@@ -36,5 +37,13 @@ public class ExpertServiceImpl extends BaseServiceImpl<Expert, Long, ExpertRepos
         List<OfferStatus> allowedStatuses = Arrays.asList(OfferStatus.WAITING_TO_EXPERT_OFFER, OfferStatus.WAITING_TO_CHOOSE_AN_EXPERT);
 
         return clientOfferService.findBySubCategoryInAndOfferStatusIn(expertSubCategories, allowedStatuses);
+    }
+
+    @Override
+    public void updateExpertAverageRating(Expert expert) {
+        Long expertId = expert.getId();
+        double averageRatingOfExpert = ratingService.getAverageOfExpert(expertId);
+        expert.setAverageRate(averageRatingOfExpert);
+        repository.save(expert);
     }
 }

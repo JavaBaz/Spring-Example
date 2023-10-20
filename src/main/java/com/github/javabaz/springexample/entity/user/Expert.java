@@ -4,6 +4,8 @@ import com.github.javabaz.springexample.entity.SubCategory;
 import com.github.javabaz.springexample.entity.credit.Wallet;
 import com.github.javabaz.springexample.entity.enums.ExpertStatus;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.*;
@@ -63,4 +65,8 @@ public class Expert {
             inverseJoinColumns = @JoinColumn(name = "subcategory_id")
     )
     private Set<SubCategory> subCategories = new HashSet<>();
+
+    @Min(0)
+    @Max(5)
+    private double averageRate;
 }

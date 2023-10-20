@@ -4,6 +4,7 @@ package com.github.javabaz.springexample.entity.offer;
 import com.github.javabaz.springexample.entity.SubCategory;
 import com.github.javabaz.springexample.entity.enums.OfferStatus;
 import com.github.javabaz.springexample.entity.user.Client;
+import com.github.javabaz.springexample.entity.user.Expert;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -50,4 +51,6 @@ public class ClientOffer {
     @Enumerated(EnumType.STRING)
     private OfferStatus offerStatus;
 
+    @ManyToOne
+    private Expert chosenExpertToDoJob;
 }

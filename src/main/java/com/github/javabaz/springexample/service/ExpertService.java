@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface ExpertService extends BaseService<Expert, Long> {
     List<ClientOffer> findAvailableOffers(Expert expert);
+    void updateExpertAverageRating(Expert expert);
 }
