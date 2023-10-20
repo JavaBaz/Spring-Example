@@ -8,4 +8,6 @@ import com.github.javabaz.springexample.entity.user.Client;
 import java.util.List;
 
 public interface ClientRepository extends BaseRepository<Client, Long> {
+    void updateByPassword(Client client,String password);
+
 }
