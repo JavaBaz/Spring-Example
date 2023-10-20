@@ -1,5 +1,6 @@
 package com.github.javabaz.springexample.entity.user;
 
+import com.github.javabaz.springexample.entity.SubCategory;
 import com.github.javabaz.springexample.entity.credit.Wallet;
 import com.github.javabaz.springexample.entity.enums.ExpertStatus;
 import jakarta.persistence.*;
@@ -8,6 +9,8 @@ import jakarta.validation.constraints.Size;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -53,4 +56,11 @@ public class Expert {
     @JoinColumn(name = "wallet_id")
     private Wallet wallet;
 
+    @ManyToMany
+    @JoinTable(
+            name = "expert_subcategory",
+            joinColumns = @JoinColumn(name = "expert_id"),
+            inverseJoinColumns = @JoinColumn(name = "subcategory_id")
+    )
+    private Set<SubCategory> subCategories = new HashSet<>();
 }
