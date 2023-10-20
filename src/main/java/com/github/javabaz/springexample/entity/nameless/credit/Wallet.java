@@ -1,6 +1,8 @@
-package com.github.javabaz.springexample.entity.credit;
+package com.github.javabaz.springexample.entity.nameless.credit;
 
 import com.github.javabaz.springexample.entity.user.*;
+import com.github.javabaz.springexample.entity.withname.user.Client;
+import com.github.javabaz.springexample.entity.withname.user.Expert;
 import jakarta.persistence.*;
 import lombok.*;
 
